@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas API Php</title>
+</head>
+<body>
+    <div id="contenedor">
+        <a href="#" id="enlace">Enlace vacío</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        const enlaceNuevo = document.querySelector('#enlace');
+        enlaceNuevo.addEventListener('click', ()=>{
+            let parrafos = document.querySelectorAll('p');
+            console.log(parrafos[0].textContent);
+            enlaceNuevo.setAttribute('href', `control.php?nombre=${parrafos[0].textContent}`);
+        });
+    </script>
+</body>
+</html>
